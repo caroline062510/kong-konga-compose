@@ -76,8 +76,9 @@ services:
       KONG_SSL: "on"
     ports:
       - 8000:8000
-      - 8001:8001       # Remove this after secure ADMIN API
       - 8443:8443
+      - 127.0.0.1:8001:8001       # Remove this after secure ADMIN API
+      - 127.0.0.1:8444:8444
     security_opt:
       - apparmor:docker-default
       - no-new-privileges:true
